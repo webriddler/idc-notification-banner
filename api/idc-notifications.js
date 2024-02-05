@@ -8,7 +8,7 @@ function getQueryParam(name) {
 const key = getQueryParam("key");
 const body = document.getElementsByTagName("body")[0];
 const formData = new URLSearchParams();
-const endpoint = "http://localhost/test/test.php";
+const endpoint = "http://localhost/idc-api/apihandler.php";
 formData.append("key", key);
 
 fetch(endpoint, {
