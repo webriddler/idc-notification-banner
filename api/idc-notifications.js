@@ -2,9 +2,10 @@ const urlParams = new URLSearchParams(window.location.search);
 const key = urlParams.get("key");
 const body = document.getElementsByTagName("body")[0];
 const formData = new URLSearchParams();
+const endpoint = "http://localhost/test/test.php";
 formData.append("key", key);
 
-fetch("http://localhost/test/test.php", {
+fetch(endpoint, {
   method: "POST",
   headers: {
     "Content-Type": "application/x-www-form-urlencoded",
