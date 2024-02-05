@@ -1,5 +1,11 @@
-const urlParams = new URLSearchParams(window.location.search);
-const key = urlParams.get("key");
+function getQueryParam(name) {
+    const scriptUrl = document.currentScript.src;
+    const queryString = scriptUrl.split('?')[1];
+    const urlParams = new URLSearchParams(queryString);
+    return urlParams.get(name);
+}
+
+const key = getQueryParam("key");
 const body = document.getElementsByTagName("body")[0];
 const formData = new URLSearchParams();
 const endpoint = "http://localhost/test/test.php";
